@@ -1,0 +1,6 @@
+vim/.netrwhist
+vim/plugged/*
+vim/swapfiles/*
+vim/undofiles/*
+
+shells/zsh/zinit/plugins/romkatv---powerlevel10k

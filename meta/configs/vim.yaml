@@ -1,4 +1,3 @@
 - link:
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    exclude: ~/.vim/plugged
