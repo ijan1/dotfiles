@@ -1,10 +1,21 @@
-- clean: ['~']
+- defaults:
+  link:
+    relink: true
+    create: true
+
+- clean: [
+  '~',
+  '~.config'
+]
 
 - link:
-    ~/.gitconfig:
-        path: gitconfig
-        create: false
-        relink: false
-        force: false
+  ~/.gitconfig:
+    path: gitconfig
 
-
+- create:
+  - ~/Downloads
+  - ~/Documents
+  - ~/Documents/Pictures
+  - ~/Documents/Music
+  - ~/Documents/Videos
+  - ~/Desktop
