@@ -1,2 +1,3 @@
 - link:
     ~/.zshrc: shells/zsh/zshrc
+    ~/.zinit: shells/zsh/zinit

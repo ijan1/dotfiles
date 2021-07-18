@@ -1,0 +1,10 @@
+!! URxvt Appearance
+#include ".Xresources.d/urxvt-unicode"
+#URxvt.font: xft:Iosevka:style=Regular:size=9
+#URxvt.boldfont: xft:Iosevka:style=Bold:size=9
+#URxvt.italicfont: xft:Iosevka:style=Italic:size=9
+#URxvt.boldItalicfont: xft:Iosevka:style=Bold Italic:size=9
+Urxvt.scrollBar: false
+Urxvt.depth: 24
+Urxvt.letterSpace: 0
+Urxvt.lineSpace: 0

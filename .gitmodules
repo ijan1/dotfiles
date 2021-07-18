@@ -2,3 +2,6 @@
 	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "shells/zsh/zinit/bin"]
+	path = shells/zsh/zinit/bin
+	url = https://github.com/zdharma/zinit
