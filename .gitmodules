@@ -5,6 +5,3 @@
 [submodule "shells/zsh/zinit/bin"]
 	path = shells/zsh/zinit/bin
 	url = https://github.com/zdharma/zinit
-[submodule "shells/zsh/zinit/plugins/romkatv---powerlevel10k"]
-	path = shells/zsh/zinit/plugins/romkatv---powerlevel10
-	url = https://github.com/romkatv/powerlevel10k

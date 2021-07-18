@@ -1,3 +1,5 @@
 - link:
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+- glob:
+    ~/.vim/plugged
