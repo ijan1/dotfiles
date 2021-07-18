@@ -1,0 +1,3 @@
+- link:
+    ~/.xinitrc: desktop/x11/xinitrc
+    ~/.Xresources : desktop/x11/xresources

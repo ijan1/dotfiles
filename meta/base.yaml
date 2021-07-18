@@ -1,9 +1,14 @@
 - defaults:
-  link:
-    create: true
-    relink: true
+    link:
+        create: true
+        relink: true
+
+- create:
+    - ~/Downloads
+    - ~/Documents/Pictures
+    - ~/Documents/Videos
 
 - clean: [
-  '~',
-  '~/.config'
+    '~',
+    '~/.config'
 ]
