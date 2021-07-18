@@ -5,3 +5,6 @@
 [submodule "shells/zsh/zinit/bin"]
 	path = shells/zsh/zinit/bin
 	url = https://github.com/zdharma/zinit
+[submodule "shells/scripts/base16-shell"]
+	path = shells/scripts/base16-shell
+	url = https://github.com/chriskempson/base16-shell
