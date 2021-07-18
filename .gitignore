@@ -3,4 +3,4 @@ vim/plugged/*
 vim/swapfiles/*
 vim/undofiles/*
 
-shells/zsh/zinit/plugins/*
+shells/zsh/zinit/*
