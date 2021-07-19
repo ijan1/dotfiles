@@ -3,7 +3,10 @@ i3
 polybar
 flameshot
 rofi
+mpd
+ncmpcpp
 scripts
 redshift
 x11
 zsh
+p10k

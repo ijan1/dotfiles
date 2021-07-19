@@ -1,8 +1,12 @@
 !! URxvt Appearance
-URxvt.font: xft:bitstream vera sans mono:size16:antialias=true
-URxvt.boldfont: xft:bitstream vera sans mono:bold:size16:antialias=true
-URxvt.italicfont: xft:Iosevka:style=Italic:size=9
-URxvt.boldItalicfont: xft:Iosevka:style=Bold Italic:size=9
+!URxvt.font: xft:bitstream vera sans mono:size16:antialias=true
+!URxvt.boldfont: xft:bitstream vera sans mono:bold:size16:antialias=true
+!URxvt.italicfont: xft:Iosevka:style=Italic:size=9
+!URxvt.boldItalicfont: xft:Iosevka:style=Bold Italic:size=9
+
+URxvt*font: xft:Iosevka:pixelsize=14:foundry=adobe:width=normal:spacing=100:scalable=true
+URxvt*boldFont: xft:Iosevka:bold:pixelsize=14:foundry=adobe:width=normal:spacing=100:scalable=true
+
 Urxvt.scrollBar: false
 Urxvt.depth: 24
 Urxvt.letterSpace: 0
