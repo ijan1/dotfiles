@@ -4,10 +4,13 @@
 !URxvt.italicfont: xft:Iosevka:style=Italic:size=9
 !URxvt.boldItalicfont: xft:Iosevka:style=Bold Italic:size=9
 
-URxvt*font: xft:Iosevka:pixelsize=14:foundry=adobe:width=normal:spacing=100:scalable=true
-URxvt*boldFont: xft:Iosevka:bold:pixelsize=14:foundry=adobe:width=normal:spacing=100:scalable=true
+!URxvt*font: xft:Iosevka:pixelsize=14:foundry=adobe:width=normal:spacing=100:scalable=true
+!URxvt*boldFont: xft:Iosevka:bold:pixelsize=14:foundry=adobe:width=normal:spacing=100:scalable=true
+!
+URxvt.font:           xft:IBM Plex Mono, xft:MesloLGS NF:style=Regular:size=10
+URxvt.boldFont:       xft:IBM Plex Mono, xft:MesloLGS NF:style=Bold:size=10
+Urxvt.italicFont:     xft:IBM Plex Mono, xft:MesloLGS NF:style=Italic:size=10
+Urxvt.boldItalicFont: xft:IBM Plex Mono, xft:MesloLGS NF:style=Bold Italic: size=10
 
-Urxvt.scrollBar: false
+Urxvt.scrollBar: true
 Urxvt.depth: 24
-Urxvt.letterSpace: 0
-Urxvt.lineSpace: 0

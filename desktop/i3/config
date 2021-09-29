@@ -68,10 +68,10 @@ smart_borders no_gaps
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+e exec --no-startup-id "rofi -show drun -modi run#window,drun -show-icons -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
-bindsym Print exec --no-startup-id flameshot full -c -p ~/Pictures/Screenshots
-bindsym $mod+Print exec --no-startup-id flameshot gui
+bindsym Print exec flameshot full -c -p ~/Documents/Pictures/Screenshots
+bindsym $mod+Print exec flameshot gui
 
 # This manages the light settings
 # bindsym $mod+F6 exec --no-startup-id xbacklight -inc 5
@@ -210,8 +210,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start polybar
-exec_always --no-startup-id $HOME/Scripts/redshift_launch.sh
-exec_always --no-startup-id "sh -c 'sleep 1; exec $HOME/Scripts/launch_polybar.sh'"
+#exec_always --no-startup-id $HOME/Scripts/redshift_launch.sh
+#exec_always --no-startup-id "sh -c 'sleep 1; exec $HOME/Scripts/launch_polybar.sh'"
 # exec_always --no-startup-id polybar -q top -c ~/.config/polybar/config.ini &
 # exec_always --no-startup-id polybar -q bottom -c ~/.config/polybar/config.ini &
 

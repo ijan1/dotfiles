@@ -51,4 +51,5 @@ fi
 setxkbmap gb
 
 i3 &
-exec urxvt
+xbindkeys
+exec alacritty

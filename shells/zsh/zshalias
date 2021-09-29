@@ -1,0 +1,2 @@
+alias hdd="udisksctl mount -b /dev/sdb1"
+alias uhdd="udisksctl unmount -b /dev/sdb1"
