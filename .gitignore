@@ -1,6 +1,7 @@
 vim/.netrwhist
 vim/plugged/*
 vim/swapfiles/*
-vim/undofiles/*
+vim/undo_files/*
+vim/view/*
 
 shells/zsh/zinit/*

@@ -3,22 +3,28 @@ source ~/.vim/plugins.vim
 " Enable filetype plugins (~/.vim/ftplugin)
 filetype plugin on
 
+" Set leader key to ","
+let mapleader = ","
+
 "colorscheme
-colorscheme nightfly
+colorscheme ayu
 
 " lightline configuration
 set laststatus=2
-let g:lightline = { 'colorscheme' : 'nightfly' }
+let g:lightline = { 'colorscheme' : 'ayu' }
 
- " enable highlight search set hlsearch
+" enable highlight search
+set hlsearch
 
- " clear highlight on escape/escape
+" clear highlight on escape/escape
 nnoremap <esc><esc> :noh<return>
+" clear the screen once you exit vim
+au VimLeave * :!clear
 
- " disable auto commenting
+" disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
- " automatically enable case sensitive when search has uppercase letter
+" automatically enable case sensitive when search has uppercase letter
 set smartcase
 
  " show line number on side
@@ -36,4 +42,12 @@ set wildmenu		" display completion matches in a status line
 set ttimeout		" time out for key codes
 set ttimeoutlen=100	" wait up to 100ms after Esc for special key
 
+" Adds support for clang-format. Requires clang to be installed
 map <C-K> :py3f ~/.vim/clang-format.py<cr>
+
+" Persistent undo across sessions
+set undodir=~/.vim/undo_files
+set undofile
+
+" Disable scratch window for YCM
+set completeopt-=preview

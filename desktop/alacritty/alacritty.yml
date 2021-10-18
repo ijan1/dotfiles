@@ -3,42 +3,71 @@ env:
 
 w_bold_text_with_bright_colors: true
 
-  #Colors
+# Colors (Ayu Dark)
 colors:
   # Default colors
-    primary:
-        background:        '#011627'
-        foreground:        '#acb4c2'
-        bright_foreground: '#eeeeee'
+  primary:
+    background: '0x0f1419'
+    foreground: '0xe6e1cf'
 
-    # Cursor colors
-    cursor:
-        text:   '#080808'
-        cursor: '#9ca1aa'
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xf34a4a'
+    green:   '0xbae67e'
+    yellow:  '0xffee99'
+    blue:    '0x73d0ff'
+    magenta: '0xd4bfff'
+    cyan:    '0x83CEC6'
+    white:   '0xf2f2f2'
 
-    # Selection colors
-    selection:
-        text:       '#080808'
-        background: '#b2ceee'
+  # Bright colors
+  bright:
+    black:   '0x737d87'
+    red:     '0xff3333'
+    green:   '0xc2d94c'
+    yellow:  '0xe7c547'
+    blue:    '0x59c2ff'
+    magenta: '0xb77ee0'
+    cyan:    '0x5ccfe6'
+    white:   '0xffffff'
 
-    # Normal colors
-    normal:
-        black:   '#1d3b53'
-        red:     '#fc514e'
-        green:   '#a1cd5e'
-        yellow:  '#e3d18a'
-        blue:    '#82aaff'
-        magenta: '#c792ea'
-        cyan:    '#7fdbca'
-        white:   '#a1aab8'
-
-    # Bright colors
-    bright:
-        black:   '#7c8f8f'
-        red:     '#ff5874'
-        green:   '#21c7a8'
-        yellow:  '#ecc48d'
-        blue:    '#82aaff'
-        magenta: '#ae81ff'
-        cyan:    '#7fdbca'
-        white:   '#d6deeb'
+#   #Colors for nightfly
+# colors:
+#   # Default colors
+#     primary:
+#         background:        '#011627'
+#         foreground:        '#acb4c2'
+#         bright_foreground: '#eeeeee'
+# 
+#     # Cursor colors
+#     cursor:
+#         text:   '#080808'
+#         cursor: '#9ca1aa'
+# 
+#     # Selection colors
+#     selection:
+#         text:       '#080808'
+#         background: '#b2ceee'
+# 
+#     # Normal colors
+#     normal:
+#         black:   '#1d3b53'
+#         red:     '#fc514e'
+#         green:   '#a1cd5e'
+#         yellow:  '#e3d18a'
+#         blue:    '#82aaff'
+#         magenta: '#c792ea'
+#         cyan:    '#7fdbca'
+#         white:   '#a1aab8'
+# 
+#     # Bright colors
+#     bright:
+#         black:   '#7c8f8f'
+#         red:     '#ff5874'
+#         green:   '#21c7a8'
+#         yellow:  '#ecc48d'
+#         blue:    '#82aaff'
+#         magenta: '#ae81ff'
+#         cyan:    '#7fdbca'
+#         white:   '#d6deeb'

@@ -28,7 +28,7 @@ Plug 'amix/vim-zenroom2'
 Plug 'ycm-core/YouCompleteMe'
 function! BuildYCM(info)
 	if a:info.status = 'installed' || a:info.force
-		!./install.py --clang-completer --racer-completer
+		!./install.py --clangd-completer
 	endif
 endfunction
 
@@ -36,11 +36,17 @@ endfunction
 let &t_8f ="\<Esc>[38;2;%lu;%lu;%lu;%lum"
 let &t_8b ="\<Esc>[48;2;%lu;%lu;%lu;%lum"
 
-" Colorscheme
+" Colorschemes
 set termguicolors
 set bg=dark
 let g:gruvbox_contrast_dark = '(hard)'
 let ayucolor="dark" " 'dark' and 'light' and 'mirage'
 
-
 call plug#end()
+
+" Easy align configuration
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
