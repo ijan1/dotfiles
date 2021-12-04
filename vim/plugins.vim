@@ -11,6 +11,7 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/vim-easy-align'
+Plug 'vhda/verilog_systemverilog.vim'
 
 " Syntax highlight
 Plug 'plasticboy/vim-markdown'
@@ -23,6 +24,10 @@ Plug 'dylanaraps/wal.vim'
 " Goyo/Markdown
 Plug 'junegunn/goyo.vim'
 Plug 'amix/vim-zenroom2'
+
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " YCM
 Plug 'ycm-core/YouCompleteMe'
