@@ -6,7 +6,8 @@ filetype plugin on
 " Set leader key to ","
 let mapleader = ","
 
-"colorscheme
+" colorscheme
+syntax on
 colorscheme ayu
 
 " lightline configuration

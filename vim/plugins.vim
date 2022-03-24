@@ -7,7 +7,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/vim-easy-align'
@@ -18,6 +17,7 @@ Plug 'plasticboy/vim-markdown'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'morhetz/gruvbox'
 Plug 'dylanaraps/wal.vim'
 
@@ -38,8 +38,8 @@ function! BuildYCM(info)
 endfunction
 
 " Fixes alacritty ';' delimiter for these settings
-let &t_8f ="\<Esc>[38;2;%lu;%lu;%lu;%lum"
-let &t_8b ="\<Esc>[48;2;%lu;%lu;%lu;%lum"
+" let &t_8f ="\<Esc>[38;2;%lu;%lu;%lu;%lum"
+" let &t_8b ="\<Esc>[48;2;%lu;%lu;%lu;%lum"
 
 " Colorschemes
 set termguicolors
