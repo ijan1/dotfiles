@@ -3,5 +3,7 @@ vim/plugged/*
 vim/swapfiles/*
 vim/undo_files/*
 vim/view/*
+music/mpd/startup
+shells/zsh/cache/
 
 shells/zsh/zinit/*
