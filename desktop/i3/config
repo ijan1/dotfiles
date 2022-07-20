@@ -71,7 +71,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+e exec --no-startup-id "rofi -show drun -modi run#window,drun -show-icons -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 bindsym Print exec flameshot full -c -p ~/Documents/Pictures/Screenshots
-bindsym $mod+Print exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
 
 # This manages the light settings
 # bindsym $mod+F6 exec --no-startup-id xbacklight -inc 5

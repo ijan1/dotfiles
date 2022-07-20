@@ -3,16 +3,7 @@ source ~/.vim/plugins.vim
 " Enable filetype plugins (~/.vim/ftplugin)
 filetype plugin on
 
-" Set leader key to ","
 let mapleader = ","
-
-" colorscheme
-syntax on
-colorscheme ayu
-
-" lightline configuration
-set laststatus=2
-let g:lightline = { 'colorscheme' : 'ayu' }
 
 " enable highlight search
 set hlsearch
@@ -26,9 +17,10 @@ au VimLeave * :!clear
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " automatically enable case sensitive when search has uppercase letter
+set ignorecase
 set smartcase
 
- " show line number on side
+" show line number on side
 set number
 set relativenumber
 
@@ -50,16 +42,11 @@ map <C-K> :py3f ~/.vim/clang-format.py<cr>
 set undodir=~/.vim/undo_files
 set undofile
 
-" Disable scratch window for YCM
-set completeopt-=preview
-
 packadd termdebug " Enable Termdebug/gdb
 let g:termdebug_wide=1 " Display source code on the right
 noremap <silent> <leader>td :Termdebug<cr>
 
-" Tex stuff
-" set grepprg=grep\ -nH\ $*
-" let g:tex_flavor = "latex"
-" set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+noremap <silent> <leader>l : tabnew<cr>
+noremap <silent> <leader>n : tabn<cr>
+noremap <silent> <leader>p : tabp<cr>
 
-let g:UltiSnipsExpandTrigger="<c-j>"
