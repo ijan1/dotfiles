@@ -35,12 +35,16 @@ set wildmenu		" display completion matches in a status line
 set ttimeout		" time out for key codes
 set ttimeoutlen=100	" wait up to 100ms after Esc for special key
 
+" Remove trailing whitespace on write
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Adds support for clang-format. Requires clang to be installed
 map <C-K> :py3f ~/.vim/clang-format.py<cr>
 
 " Persistent undo across sessions
 set undodir=~/.vim/undo_files
 set undofile
+set viminfo='50,<1000,s100,:0,n~/.vim/viminfo
 
 packadd termdebug " Enable Termdebug/gdb
 let g:termdebug_wide=1 " Display source code on the right

@@ -2,9 +2,9 @@ set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
 set errorformat=%f:%l:\ %m
 
 " Python specific settings.
-setlocal tabstop=2
-setlocal softtabstop=2
-setlocal shiftwidth=2
+" setlocal tabstop=2
+" setlocal softtabstop=2
+setlocal shiftwidth=4
 setlocal expandtab
 setlocal autoindent
 setlocal fileformat=unix
