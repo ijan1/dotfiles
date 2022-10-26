@@ -4,6 +4,7 @@ vim/swapfiles/*
 vim/undo_files/*
 vim/view/*
 vim/snips
+vim/snips/*
 vim/viminfo
 music/mpd/startup
 shells/zsh/cache/
