@@ -6,6 +6,8 @@ vim/view/*
 vim/snips
 vim/snips/*
 vim/viminfo
+vim/sessions
+vim/sessions/*
 music/mpd/startup
 shells/zsh/cache/
 

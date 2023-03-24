@@ -54,7 +54,7 @@ setxkbmap gb
 xinput --set-prop 17 'libinput Accel Profile Enabled' 0, 1
 xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -0.5
 
-~/.config/mpd/startup
+# ~/.config/mpd/startup
 
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK

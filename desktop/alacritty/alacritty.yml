@@ -1,6 +1,9 @@
 env:
     TERM: xterm-256color
 
+font:
+  size: 8
+
 w_bold_text_with_bright_colors: true
 
 # Colors (Ayu Dark)
@@ -39,17 +42,17 @@ colors:
 #         background:        '#011627'
 #         foreground:        '#acb4c2'
 #         bright_foreground: '#eeeeee'
-# 
+#
 #     # Cursor colors
 #     cursor:
 #         text:   '#080808'
 #         cursor: '#9ca1aa'
-# 
+#
 #     # Selection colors
 #     selection:
 #         text:       '#080808'
 #         background: '#b2ceee'
-# 
+#
 #     # Normal colors
 #     normal:
 #         black:   '#1d3b53'
@@ -60,7 +63,7 @@ colors:
 #         magenta: '#c792ea'
 #         cyan:    '#7fdbca'
 #         white:   '#a1aab8'
-# 
+#
 #     # Bright colors
 #     bright:
 #         black:   '#7c8f8f'

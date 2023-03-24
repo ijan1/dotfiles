@@ -10,6 +10,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'preservim/nerdtree'
 Plug 'plasticboy/vim-markdown'
+Plug 'triglav/vim-visual-increment'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'
@@ -73,7 +74,7 @@ let g:lightline = { 'colorscheme' : theme }
 " Open NerdTree if no session or file is specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
-noremap <silent> <leader>go :NERDTree<cr>
+" noremap <silent> <leader>go :NERDTree<cr>
 " Mouse functionality
 set mouse=n " breaks clicking on links in xterm in normal mode
 let g:NERDTreeMouseMode=3

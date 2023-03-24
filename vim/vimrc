@@ -1,4 +1,5 @@
 source ~/.vim/plugins.vim
+source ~/.vim/cscope_maps.vim
 
 " Enable filetype plugins (~/.vim/ftplugin)
 filetype plugin on
@@ -23,6 +24,7 @@ set smartcase
 " show line number on side
 set number
 set relativenumber
+set cursorline
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
@@ -53,6 +55,11 @@ noremap <silent> <leader>td :Termdebug<cr>
 noremap <silent> <leader>l : tabnew<cr>
 noremap <silent> <leader>n : tabn<cr>
 noremap <silent> <leader>p : tabp<cr>
+
+noremap <silent> <leader>go : Explore<cr>
+
+noremap <silent> <leader>ss : mksession! ~/.vim/sessions/<cr>
+noremap <silent> <leader>sl : source ~/.vim/sessions/<cr>
 
 if has("autocmd")
   " Highlight TODO, FIXME, NOTE, etc.
