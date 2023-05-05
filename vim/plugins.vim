@@ -1,14 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
 " Functionality
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'vhda/verilog_systemverilog.vim'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'plasticboy/vim-markdown'
 Plug 'triglav/vim-visual-increment'
 
@@ -16,7 +16,6 @@ Plug 'triglav/vim-visual-increment'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'morhetz/gruvbox'
-Plug 'dylanaraps/wal.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -61,8 +60,9 @@ let g:UltiSnipsExpandTrigger="<cr>"
 
 " colorscheme configuration
 syntax on
-let themes = ['ayu', 'nightfly']
-let theme = themes[localtime() % len(themes)]
+let themes = ['ayu', 'nightfly', 'gruvbox']
+" let theme = themes[localtime() % len(themes)]
+let theme = 'ayu'
 unlet themes
 execute 'colorscheme '.theme
 
@@ -72,9 +72,10 @@ let g:lightline = { 'colorscheme' : theme }
 
 " NerdTree
 " Open NerdTree if no session or file is specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
 " noremap <silent> <leader>go :NERDTree<cr>
+
 " Mouse functionality
 set mouse=n " breaks clicking on links in xterm in normal mode
 let g:NERDTreeMouseMode=3
