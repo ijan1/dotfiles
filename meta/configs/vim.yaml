@@ -1,3 +1,4 @@
 - link:
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+    ~/.config/clangd/config.yaml: config.yaml
