@@ -10,13 +10,15 @@ Diagnostics:
           misc-definitions-in-headers, misc-misplaced-const,
           misc-non-copyable-objects, misc-redundant-expression,
           modernize-macro-to-enum]
-    Remove: [readability-function-cognitive-complexity, readability-identifier-length, readability-braces-around-statements]
+    Remove: [readability-braces-around-statements,
+             readability-identifier-length,
+             readability-function-cognitive-complexity]
 
   UnusedIncludes: Strict
 
 InlayHints:
-  Designators: Yes
   Enabled: Yes
+  Designators: Yes
   ParameterNames: Yes
   DeducedTypes: Yes
 
@@ -34,3 +36,6 @@ Diagnostics:
           concurrency-*, cppcoreguidelines-*, modernize-*, openmp-*,
           performance-*, portability-*, readability-*,
           fuchsia-multiple-inheritance]
+    Remove: [cppcoreguidelines-owning-memory,
+             readability-identifier-length,
+             readability-function-cognitive-complexity]

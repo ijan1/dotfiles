@@ -1,5 +1,6 @@
-call plug#begin('~/.vim/plugged')
+let mapleader = "," " I think this is needed here
 
+call plug#begin('~/.vim/plugged')
 " Functionality
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -31,26 +32,59 @@ endfunction
 " Let clangd fully control code completion
 call plug#end()
 
-let g:ycm_max_diagnostics_to_display = 0
+let g:ycm_max_diagnostics_to_display = 50
 let g:ycm_enable_inlay_hints = 1
+let g:ycm_clear_inlay_hints_in_insert_mode = 1
 let g:ycm_echo_current_diagnostic = 'virtual-text'
+let g:ycm_update_diagnostics_in_insert_mode = 0
 
-let g:ycm_clangd_uses_ycmd_caching = 0
+let g:ycm_clangd_uses_ycmd_caching = 1
 " Use installed clangd, not YCM-bundled clangd which doesn't get updates.
 let g:ycm_clangd_binary_path = exepath("clangd")
 let g:ycm_clangd_args = ['-log=verbose', '-pretty',
 			\'--clang-tidy', '--enable-config']
 
-"rust options
-let g:ycm_rust_toolchain_root = exepath("rust-analyzer")
+let g:ycm_enable_semantic_highlighting=1
+let MY_YCM_HIGHLIGHT_GROUP = {
+			\ 'typeParameter': 'PreProc',
+			\
+			\ 'variable': 'Normal',
+			\ 'parameter': 'Normal',
+			\ 'property': 'Normal',
+			\ 'enumMember': 'Normal',
+			\
+			\ 'function': 'Normal',
+			\ 'method': 'Normal',
+			\
+			\ 'enum': 'Special',
+			\ 'namespace': 'Special',
+			\ 'class': 'Special',
+			\ 'struct': 'Special',
+			\
+			\}
+for tokenType in keys( MY_YCM_HIGHLIGHT_GROUP )
+  call prop_type_add( 'YCM_HL_' . tokenType,
+                    \ { 'highlight': MY_YCM_HIGHLIGHT_GROUP[ tokenType ] } )
+endfor
 
-let mapleader = "," " I think this is needed here
+nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
 
 " Colorschemes
+syntax on
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark = '(hard)'
 let ayucolor="dark" " 'dark' and 'light' and 'mirage'
+let themes = ['ayu', 'nightfly', 'gruvbox']
+" let theme = themes[localtime() % len(themes)]
+let theme = 'ayu'
+unlet themes
+execute 'colorscheme '.theme
+
+" lightline configuration
+set laststatus=2
+let g:lightline = { 'colorscheme' : theme }
 
 " Easy align configuration
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -69,16 +103,6 @@ set completeopt-=preview
 let g:UltiSnipsExpandTrigger="<cr>"
 
 " colorscheme configuration
-syntax on
-let themes = ['ayu', 'nightfly', 'gruvbox']
-" let theme = themes[localtime() % len(themes)]
-let theme = 'ayu'
-unlet themes
-execute 'colorscheme '.theme
-
-" lightline configuration
-set laststatus=2
-let g:lightline = { 'colorscheme' : theme }
 
 " NerdTree
 " Open NerdTree if no session or file is specified
