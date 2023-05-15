@@ -6,6 +6,9 @@ filetype plugin on
 
 let mapleader = ","
 
+" Source Vim configuration file and install plugins
+nnoremap <silent><leader>1 :source ~/.vim/vimrc \| :PlugUpdate<CR>
+
 " enable highlight search
 set hlsearch
 
@@ -25,6 +28,10 @@ set smartcase
 set number
 set relativenumber
 set cursorline
+
+" Display a line at Column 81
+set textwidth=80
+set colorcolumn=+1
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start

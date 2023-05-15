@@ -28,8 +28,21 @@ function! BuildYCM(info)
 		!./install.py --clangd-completer
 	endif
 endfunction
-
+" Let clangd fully control code completion
 call plug#end()
+
+let g:ycm_max_diagnostics_to_display = 0
+let g:ycm_enable_inlay_hints = 1
+let g:ycm_echo_current_diagnostic = 'virtual-text'
+
+let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+let g:ycm_clangd_binary_path = exepath("clangd")
+let g:ycm_clangd_args = ['-log=verbose', '-pretty',
+			\'--clang-tidy', '--enable-config']
+
+"rust options
+let g:ycm_rust_toolchain_root = exepath("rust-analyzer")
 
 let mapleader = "," " I think this is needed here
 
@@ -45,9 +58,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" Source Vim configuration file and install plugins
-nnoremap <silent><leader>1 :source ~/.vim/vimrc \| :PlugUpdate<CR>
 
 " YCM continued
 noremap <silent> <leader>gl :YcmCompleter GoToDefinition<cr>
