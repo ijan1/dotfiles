@@ -6,7 +6,7 @@ set errorformat=%f:%l:\ %m
 " setlocal softtabstop=2
 setlocal shiftwidth=4
 setlocal expandtab
-setlocal autoindent
+setlocal noautoindent
 setlocal fileformat=unix
 let python_highlight_all=1
 

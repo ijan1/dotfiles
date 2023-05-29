@@ -63,8 +63,6 @@ noremap <silent> <leader>l : tabnew<cr>
 noremap <silent> <leader>n : tabn<cr>
 noremap <silent> <leader>p : tabp<cr>
 
-noremap <silent> <leader>go : Explore<cr>
-
 noremap <silent> <leader>ss : mksession! ~/.vim/sessions/<cr>
 noremap <silent> <leader>sl : source ~/.vim/sessions/<cr>
 

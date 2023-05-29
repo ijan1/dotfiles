@@ -26,15 +26,15 @@ Plug 'honza/vim-snippets'
 Plug 'ycm-core/YouCompleteMe'
 function! BuildYCM(info)
 	if a:info.status = 'installed' || a:info.force
-		!./install.py --clangd-completer
+		!./install.py --clangd-completer --rust-completer
 	endif
 endfunction
 " Let clangd fully control code completion
 call plug#end()
 
 let g:ycm_max_diagnostics_to_display = 50
-let g:ycm_enable_inlay_hints = 1
-let g:ycm_clear_inlay_hints_in_insert_mode = 1
+"let g:ycm_enable_inlay_hints = 1
+"let g:ycm_clear_inlay_hints_in_insert_mode = 1
 let g:ycm_echo_current_diagnostic = 'virtual-text'
 let g:ycm_update_diagnostics_in_insert_mode = 0
 
@@ -48,18 +48,18 @@ let g:ycm_enable_semantic_highlighting=1
 let MY_YCM_HIGHLIGHT_GROUP = {
 			\ 'typeParameter': 'PreProc',
 			\
-			\ 'variable': 'Normal',
-			\ 'parameter': 'Normal',
-			\ 'property': 'Normal',
+			\ 'variable':   'Normal',
+			\ 'parameter':  'Normal',
+			\ 'property':   'Normal',
 			\ 'enumMember': 'Normal',
 			\
 			\ 'function': 'Normal',
-			\ 'method': 'Normal',
+			\ 'method':   'Normal',
 			\
-			\ 'enum': 'Special',
-			\ 'namespace': 'Special',
-			\ 'class': 'Special',
-			\ 'struct': 'Special',
+			\ 'enum':      'Normal',
+			\ 'namespace': 'Normal',
+			\ 'class':     'Normal',
+			\ 'struct':    'Normal',
 			\
 			\}
 for tokenType in keys( MY_YCM_HIGHLIGHT_GROUP )
@@ -103,6 +103,8 @@ set completeopt-=preview
 let g:UltiSnipsExpandTrigger="<cr>"
 
 " colorscheme configuration
+noremap <silent> <leader>go : Files<cr>
+noremap <silent> <leader>gg : Files<cr>
 
 " NerdTree
 " Open NerdTree if no session or file is specified
