@@ -1,4 +1,4 @@
 - link:
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/.config/clangd/config.yaml: config.yaml
+    ~/.config/clangd/config.yaml: vim/clang-tidy_config.yaml

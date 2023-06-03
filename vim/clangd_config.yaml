@@ -1,0 +1,12 @@
+CompileFlags:
+    Add: [-Wall, -Wextra, -Wpedantic, -Wno-strict-prototypes]
+    Remove: [-W-strict-prototypes]
+
+---
+# Fragment specific to C++ source files
+If:
+    PathExclude: [.*\.c, .*\.h]
+
+CompileFlags:
+    Add: [-std=c++17]
+

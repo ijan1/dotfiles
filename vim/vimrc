@@ -7,7 +7,7 @@ filetype plugin on
 let mapleader = ","
 
 " Source Vim configuration file and install plugins
-nnoremap <silent><leader>1 :source ~/.vim/vimrc \| :PlugUpdate<CR>
+nnoremap <silent><leader>1 :source ~/.vim/vimrc \| PlugUpdate<CR>
 
 " enable highlight search
 set hlsearch
