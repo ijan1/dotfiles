@@ -7,7 +7,6 @@
     - ~/Downloads
     - ~/Documents/Pictures
     - ~/Documents/Videos
-    - ~/.config/clangd/
 
 - clean: [
     '~',
