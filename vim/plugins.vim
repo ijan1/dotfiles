@@ -19,8 +19,8 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'morhetz/gruvbox'
 
 " Snippets
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " YCM
 Plug 'ycm-core/YouCompleteMe'
@@ -29,7 +29,6 @@ function! BuildYCM(info)
 		!./install.py --clangd-completer --rust-completer
 	endif
 endfunction
-" Let clangd fully control code completion
 call plug#end()
 
 let g:ycm_max_diagnostics_to_display = 50
@@ -68,6 +67,22 @@ for tokenType in keys( MY_YCM_HIGHLIGHT_GROUP )
                     \ { 'highlight': MY_YCM_HIGHLIGHT_GROUP[ tokenType ] } )
 endfor
 
+noremap <silent> <leader>gl :YcmCompleter GoToDefinition<cr>
+noremap <silent> <leader>gf :YcmCompleter FixIt<cr>
+noremap <silent> <leader>gh <Plug>(YCMToggleInlayHints)
+
+nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
+" Disable scratch window for YCM
+set completeopt-=preview
+
+" unfortunately, ultisnips doesn't really play too well with ycm
+let g:UltiSnipsExpandTrigger = "<C-J>"
+
+" fzf
+noremap <silent> <leader>go : Files<cr>
+noremap <silent> <leader>gg : GFiles<cr>
+
 " Colorschemes
 syntax on
 set termguicolors
@@ -91,22 +106,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" YCM continued
-noremap <silent> <leader>gl :YcmCompleter GoToDefinition<cr>
-noremap <silent> <leader>gf :YcmCompleter FixIt<cr>
-noremap <silent> <leader>gh <Plug>(YCMToggleInlayHints)
-
-nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
-nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
-" Disable scratch window for YCM
-set completeopt-=preview
-
-" Ulti snips
-" let g:UltiSnipsExpandTrigger="<cr>"
-
-" fzf
-noremap <silent> <leader>go : Files<cr>
-noremap <silent> <leader>gg : Files<cr>
 
 " NerdTree
 " Open NerdTree if no session or file is specified
