@@ -1,5 +1,7 @@
 # dotfiles
 
+# TODO: CLEAN THIS UPPP!!!
+
 ## Info
 A collection of all of my essential dotfiles. For easy installation and access.
 
