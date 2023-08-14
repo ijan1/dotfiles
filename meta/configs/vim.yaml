@@ -1,9 +1,8 @@
-- create:
-  - ~/.vim/undo_files
-  - ~/.config/clangd
-
 - link:
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.config/clangd/config.yaml: vim/clang-tidy_config.yaml
 
+- create:
+  - ~/.vim/undo_files
+  - ~/.config/clangd

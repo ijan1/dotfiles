@@ -19,8 +19,13 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'morhetz/gruvbox'
 
 " Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" There's some nasty bugs when trying to insert snippets
+" or modify existing ones, so they're being disabled for now
+ "Plug 'SirVer/ultisnips'
+ "Plug 'honza/vim-snippets'
+
+" Copilot
+" Plug 'github/copilot.vim'
 
 " YCM
 Plug 'ycm-core/YouCompleteMe'
@@ -39,7 +44,7 @@ let g:ycm_update_diagnostics_in_insert_mode = 0
 let g:ycm_clear_inlay_hints_in_insert_mode = 1
 
 let g:ycm_clangd_uses_ycmd_caching = 1
-" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+" Arch Linux has been on LLVM15 for quite a bit
 let g:ycm_clangd_binary_path = exepath("clangd")
 let g:ycm_clangd_args = ['-log=verbose', '-pretty',
 			\'--clang-tidy', '--enable-config']
@@ -77,7 +82,7 @@ nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
 set completeopt-=preview
 
 " unfortunately, ultisnips doesn't really play too well with ycm
-let g:UltiSnipsExpandTrigger = "<C-J>"
+" let g:UltiSnipsExpandTrigger = "<C-J>"
 
 " fzf
 noremap <silent> <leader>go : Files<cr>
@@ -105,7 +110,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
 
 " NerdTree
 " Open NerdTree if no session or file is specified
