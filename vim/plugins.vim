@@ -47,7 +47,7 @@ let g:ycm_clangd_uses_ycmd_caching = 1
 " Arch Linux has been on LLVM15 for quite a bit
 let g:ycm_clangd_binary_path = exepath("clangd")
 let g:ycm_clangd_args = ['-log=verbose', '-pretty',
-			\'--clang-tidy', '--enable-config']
+			\'--clang-tidy', '--enable-config', '--header-insertion=never']
 
 let g:ycm_enable_semantic_highlighting=1
 let MY_YCM_HIGHLIGHT_GROUP = {
@@ -78,8 +78,27 @@ noremap <silent> <leader>gh <Plug>(YCMToggleInlayHints)
 
 nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
 nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
+nmap <leader>D   <Plug>(YCMHover)
 " Disable scratch window for YCM
 set completeopt-=preview
+
+"Toggle YouCompleteMe on and off with F3
+function Toggle_ycm()
+    if g:ycm_show_diagnostics_ui == 0
+        let g:ycm_auto_trigger = 1
+        let g:ycm_show_diagnostics_ui = 1
+        :YcmRestartServer
+        :e
+        :echo "YCM on"
+    elseif g:ycm_show_diagnostics_ui == 1
+        let g:ycm_auto_trigger = 0
+        let g:ycm_show_diagnostics_ui = 0
+        :YcmRestartServer
+        :e
+        :echo "YCM off"
+    endif
+endfunction
+map <F3> :call Toggle_ycm() <CR>
 
 " unfortunately, ultisnips doesn't really play too well with ycm
 " let g:UltiSnipsExpandTrigger = "<C-J>"

@@ -12,6 +12,9 @@ nnoremap <silent><leader>1 :source ~/.vim/vimrc \| PlugUpdate<CR>
 " enable highlight search
 set hlsearch
 
+" enable showing amount of search result occurances
+set shortmess-=S
+
 " clear highlight on escape/escape
 nnoremap <esc><esc> :noh<return>
 " clear the screen once you exit vim
@@ -30,7 +33,7 @@ set relativenumber
 set cursorline
 
 " Display a line at Column 81
-set textwidth=80
+set textwidth=140
 set colorcolumn=+1
 
 " Allow backspacing over everything in insert mode.

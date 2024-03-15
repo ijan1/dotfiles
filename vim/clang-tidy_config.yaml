@@ -13,7 +13,8 @@ Diagnostics:
     Remove: [readability-braces-around-statements,
              readability-identifier-length,
              readability-magic-numbers,
-             readability-function-cognitive-complexity]
+             readability-function-cognitive-complexity,
+             bugprone-easily-swappable-parameters]
 
   UnusedIncludes: Strict
 
@@ -39,4 +40,16 @@ Diagnostics:
           fuchsia-multiple-inheritance]
     Remove: [cppcoreguidelines-owning-memory,
              readability-identifier-length,
-             readability-function-cognitive-complexity]
+             readability-function-cognitive-complexity,
+             readability-braces-around-statements,
+             readability-magic-numbers,
+             readability-function-cognitive-complexity,
+             bugprone-easily-swappable-parameters]
+
+  UnusedIncludes: Strict
+
+InlayHints:
+  Enabled: Yes
+  Designators: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes

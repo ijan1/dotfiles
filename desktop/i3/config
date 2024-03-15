@@ -59,17 +59,21 @@ smart_borders no_gaps
 # exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +4% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -4% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id alacritty --working-directory $HOME
 bindsym $mod+e exec --no-startup-id "rofi -show drun -modi run#window,drun -show-icons -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 bindsym Print exec flameshot full -c -p ~/Documents/Pictures/Screenshots
 bindsym $mod+Shift+s exec flameshot gui
@@ -223,5 +227,5 @@ for_window [class="Org.gnome.Nautilus"] floating enable
 
 bar {
     position top
-    status_command i3status
+    status_command SCRIPT_DIR=~/.config/i3blocks i3blocks
 }

@@ -1,14 +1,8 @@
 vim
 i3
 alacritty
-polybar
-pywal
 flameshot
-rofi
-mpd
-ncmpcpp
 scripts
-redshift
 xbindkeys
 x11
 zsh
