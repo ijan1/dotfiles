@@ -35,6 +35,7 @@ set cursorline
 " Display a line at Column 81
 set textwidth=140
 set colorcolumn=+1
+set tw=0 " don't add linebreak
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start

@@ -8,7 +8,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'vhda/verilog_systemverilog.vim'
+" Plug 'vhda/verilog_systemverilog.vim'
 " Plug 'preservim/nerdtree'
 Plug 'plasticboy/vim-markdown'
 Plug 'triglav/vim-visual-increment'
@@ -17,6 +17,10 @@ Plug 'triglav/vim-visual-increment'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'morhetz/gruvbox'
+
+" Verible
+ "Plug 'prabirshrestha/vim-lsp'
+ "Plug 'chipsalliance/verible'
 
 " Snippets
 " There's some nasty bugs when trying to insert snippets
@@ -36,6 +40,14 @@ function! BuildYCM(info)
 endfunction
 call plug#end()
 
+" if executable('verible-verilog-ls')
+"     au User lsp_setup call lsp#register_server({
+"         \ 'name': 'verible-verilog-ls',
+"         \ 'cmd': {server_info->['verible-verilog-ls']},
+"         \ 'allowlist': ['verilog', 'systemverilog'],
+"         \ })
+" endif
+
 let g:ycm_max_diagnostics_to_display = 50
 let g:ycm_echo_current_diagnostic = 'virtual-text'
 let g:ycm_update_diagnostics_in_insert_mode = 0
@@ -44,7 +56,6 @@ let g:ycm_update_diagnostics_in_insert_mode = 0
 let g:ycm_clear_inlay_hints_in_insert_mode = 1
 
 let g:ycm_clangd_uses_ycmd_caching = 1
-" Arch Linux has been on LLVM15 for quite a bit
 let g:ycm_clangd_binary_path = exepath("clangd")
 let g:ycm_clangd_args = ['-log=verbose', '-pretty',
 			\'--clang-tidy', '--enable-config', '--header-insertion=never']
@@ -66,6 +77,7 @@ let MY_YCM_HIGHLIGHT_GROUP = {
 			\ 'class':     'Normal',
 			\ 'struct':    'Normal',
 			\
+			\ 'concept':   'Normal',
 			\}
 for tokenType in keys( MY_YCM_HIGHLIGHT_GROUP )
   call prop_type_add( 'YCM_HL_' . tokenType,
@@ -104,6 +116,7 @@ map <F3> :call Toggle_ycm() <CR>
 " let g:UltiSnipsExpandTrigger = "<C-J>"
 
 " fzf
+let $FZF_DEFAULT_COMMAND='find . -name stash -prune -o -print'
 noremap <silent> <leader>go : Files<cr>
 noremap <silent> <leader>gg : GFiles<cr>
 

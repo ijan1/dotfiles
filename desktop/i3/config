@@ -222,6 +222,9 @@ bindsym $mod+r mode "resize"
 # exec_always --no-startup-id polybar -q top -c ~/.config/polybar/config.ini &
 # exec_always --no-startup-id polybar -q bottom -c ~/.config/polybar/config.ini &
 
+# Start a compositor
+exec --no-startup-id picom
+
 # Make nautilus floating
 for_window [class="Org.gnome.Nautilus"] floating enable
 

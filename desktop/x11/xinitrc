@@ -46,4 +46,4 @@ export SSH_AUTH_SOCK
 
 feh --bg-scale $HOME/Downloads/xp_wallpaper.jpg
 picom --backend glx &
-exec i3
+exec dbus-launch i3
