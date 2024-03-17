@@ -26,4 +26,4 @@ foreground = "0xe6e1cf"
 TERM = "xterm-256color"
 
 [font]
-size = 8
+size = 12
