@@ -6,6 +6,8 @@ filetype plugin on
 
 let mapleader = ","
 
+set encoding=utf-8
+
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.vim/vimrc \| PlugUpdate<CR>
 
@@ -34,7 +36,7 @@ set cursorline
 
 " Display a line at Column 81
 set textwidth=140
-set colorcolumn=+1
+set colorcolumn=121
 set tw=0 " don't add linebreak
 
 " Allow backspacing over everything in insert mode.
@@ -59,7 +61,7 @@ set undodir=~/.vim/undo_files
 set undofile
 set viminfo='50,<1000,s100,:0,n~/.vim/viminfo
 
-packadd termdebug " Enable Termdebug/gdb
+" packadd termdebug " Enable Termdebug/gdb
 let g:termdebug_wide=1 " Display source code on the right
 noremap <silent> <leader>td :Termdebug<cr>
 

@@ -15,11 +15,11 @@
 #set_from_resource $act i3wm.color12 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-client.focused          #880808     $bg     $fg  $bg       $act
-client.focused_inactive #880808     $bg     $fg  $bg       $bg
-client.unfocused        #880808     $bg     $fg  $bg       $bg
-client.urgent           #880808     $bg     $fg  $bg       $bg
-client.placeholder      #880808     $bg     $fg  $bg       $bg
+# client.focused          #880808     $bg     $fg  $bg       $act
+# client.focused_inactive #880808     $bg     $fg  $bg       $bg
+# client.unfocused        #880808     $bg     $fg  $bg       $bg
+# client.urgent           #880808     $bg     $fg  $bg       $bg
+# client.placeholder      #880808     $bg     $fg  $bg       $bg
 
 client.background       #880808
 

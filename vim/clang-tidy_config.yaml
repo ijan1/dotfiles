@@ -1,5 +1,5 @@
 CompileFlags:
-    Add: [-Wall, -Wextra, -Wpedantic, -Wno-strict-prototypes, -O2, -ggdb3]
+    Add: [-Wall, -Wextra, -Wpedantic, -Wno-strict-prototypes]
     Remove: [-W-strict-prototypes]
 
 Diagnostics:
@@ -44,7 +44,8 @@ Diagnostics:
              readability-braces-around-statements,
              readability-magic-numbers,
              readability-function-cognitive-complexity,
-             bugprone-easily-swappable-parameters]
+             bugprone-easily-swappable-parameters,
+             cppcoreguidelines-non-private-member-variables-in-classes]
 
   UnusedIncludes: Strict
 
