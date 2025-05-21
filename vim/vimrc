@@ -1,5 +1,5 @@
 source ~/.vim/plugins.vim
-source ~/.vim/cscope_maps.vim
+" source ~/.vim/cscope_maps.vim
 
 " Enable filetype plugins (~/.vim/ftplugin)
 filetype plugin on
@@ -7,6 +7,7 @@ filetype plugin on
 let mapleader = ","
 
 set encoding=utf-8
+set mouse=a
 
 " Source Vim configuration file and install plugins
 nnoremap <silent><leader>1 :source ~/.vim/vimrc \| PlugUpdate<CR>
@@ -18,7 +19,9 @@ set hlsearch
 set shortmess-=S
 
 " clear highlight on escape/escape
-nnoremap <esc><esc> :noh<return>
+nmap <esc><esc> :noh<return>
+" nnoremap <f1> :noh<return>
+
 " clear the screen once you exit vim
 au VimLeave * :!clear
 
@@ -34,7 +37,7 @@ set number
 set relativenumber
 set cursorline
 
-" Display a line at Column 81
+" Display a line at Column 120
 set textwidth=140
 set colorcolumn=121
 set tw=0 " don't add linebreak
@@ -60,10 +63,6 @@ map <C-K> :py3f ~/.vim/clang-format.py<cr>
 set undodir=~/.vim/undo_files
 set undofile
 set viminfo='50,<1000,s100,:0,n~/.vim/viminfo
-
-" packadd termdebug " Enable Termdebug/gdb
-let g:termdebug_wide=1 " Display source code on the right
-noremap <silent> <leader>td :Termdebug<cr>
 
 noremap <silent> <leader>l : tabnew<cr>
 noremap <silent> <leader>n : tabn<cr>

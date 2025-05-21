@@ -43,12 +43,6 @@ int main(int argc, char *argv[])
 }
 endsnippet
 
-snippet forc "general for loop (for)"
-for (${6:auto} ${1:i} = ${2:v.begin()}; `!p import re; snip.rv = re.split("[^\w]",t[1])[-1]` ${4:!=} ${3:`!p m = re.search(r'^(?:(.*)(\.|->)begin\(\)|((?:std|boost)::)?begin\((.*)\))$', t[2]); snip.rv = (((m.group(3) if m.group(3) else "") + "end(" + m.group(4) + ")") if m.group(4) else (m.group(1) + m.group(2) + "end()")) if m else ""`}; ${5:++`!p snip.rv = t[1].split(" ")[-1]`}) {
-	${VISUAL}$0
-}
-endsnippet
-
 snippet beginend "$1.begin(), $1.end() (beginend)"
 ${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
 endsnippet
@@ -107,7 +101,7 @@ class ${1:`!p snip.rv = snip.basename or "name"`} {
 endsnippet
 
 snippet cla "An entire .h generator" b
-#ifndef ${2:`!v substitute(vim_snippets#Filename('$1_HPP','ClassName'),'.*','\U&\E','')`}
+#ifndef ${2:`!p snip.rv = snip.basename.upper() + "_HPP"`}
 #define $2
 
 /*! \class ${1/(\w+).*/$1/}
@@ -115,10 +109,11 @@ snippet cla "An entire .h generator" b
  *
  *  ${4:Detailed description}
  */
-class ${1:`!v substitute(substitute(vim_snippets#Filename('$1','ClassName'),'^.','\u&',''), '_\(\w\)', '\u\1', 'g')`} {
+class ${1:`!p snip.rv = snip.basename or "name"`} {
  public:
-	$1() = default;
-	~$1() = default;
+   $1() = default;
+   ~$1() = default;
+
  private:
 
 };
@@ -135,9 +130,8 @@ snippet fnc "Basic c++ doxygen function template" b
 *
 * @return: `!p snip.rv = t[1]`
 */
-${1:ReturnType} ${2:FunctionName}(${3:param})
-{
-	${0:FunctionBody}
+${1:ReturnType} ${2:FunctionName}(${3:param}) {
+
 }
 endsnippet
 

@@ -13,6 +13,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'plasticboy/vim-markdown'
 Plug 'triglav/vim-visual-increment'
 
+Plug 'jasonccox/vim-wayland-clipboard'
+
 " Themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'bluz71/vim-nightfly-guicolors'
@@ -23,10 +25,8 @@ Plug 'morhetz/gruvbox'
  "Plug 'chipsalliance/verible'
 
 " Snippets
-" There's some nasty bugs when trying to insert snippets
-" or modify existing ones, so they're being disabled for now
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " Copilot
 " Plug 'github/copilot.vim'
@@ -150,13 +150,16 @@ nmap ga <Plug>(EasyAlign)
 " noremap <silent> <leader>go :NERDTree<cr>
 
 " Mouse functionality
-set mouse=n " breaks clicking on links in xterm in normal mode
-let g:NERDTreeMouseMode=3
+" set mouse=n " breaks clicking on links in xterm in normal mode
+" let g:NERDTreeMouseMode=3
 
 " Snippets
 let g:UltiSnipsExpandTrigger="<enter>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" let g:UltiSnipsSnippetsDir="~/.vim/snips"
+let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
