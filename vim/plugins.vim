@@ -25,8 +25,8 @@ Plug 'morhetz/gruvbox'
 " Snippets
 " There's some nasty bugs when trying to insert snippets
 " or modify existing ones, so they're being disabled for now
- "Plug 'SirVer/ultisnips'
- "Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Copilot
 " Plug 'github/copilot.vim'
@@ -116,7 +116,7 @@ map <F3> :call Toggle_ycm() <CR>
 " let g:UltiSnipsExpandTrigger = "<C-J>"
 
 " fzf
-let $FZF_DEFAULT_COMMAND='find . -name stash -prune -o -print'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 noremap <silent> <leader>go : Files<cr>
 noremap <silent> <leader>gg : GFiles<cr>
 
@@ -153,3 +153,10 @@ nmap ga <Plug>(EasyAlign)
 set mouse=n " breaks clicking on links in xterm in normal mode
 let g:NERDTreeMouseMode=3
 
+" Snippets
+let g:UltiSnipsExpandTrigger="<enter>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
